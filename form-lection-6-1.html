@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="./css/form.css">
+
+    <style>
+        textarea {
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <form class="form js-speaker-form" autocomplete="off">
+        <h1 class="form-title">Green form</h1>
+        <div class="form-field">
+            <label class="form-label" for="name">Name</label>
+            <input class="form-input" type="text" name="name"  id="name" placeholder="Olena Voina" autofocus/>
+        </div>
+        <div class="form-field">
+            <label class="form-label" for="tel">Phone Number</label>
+            <input type="tel" name="tel" id="tel" />
+        </div>
+        <div class="form-field">
+            <label class="form-label" for="email">Email</label>
+            <input type="email" name="email" id="email" autocomplete="on" />
+        </div>
+        <div class="group"  role="group">
+            <h2>Your topic</h2>
+            <ul class="topic-options list">
+                <li>
+                    <input type="checkbox" name="topic" value="html" id="html">
+                    <label for="html">HTML</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="topic" value="css" id="css">
+                    <label for="css">CSS</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="topic" value="js" id="js">
+                    <label for="js">JS</label>
+                </li>
+            </ul>           
+        </div>
+        <div class="group" role="group">
+            <h2 class="group-title">Your experience</h2>
+            <ul class="list">
+                <li>
+                    <input type="radio" name="experience" value="juonior" id="juonior">
+                    <label for="juonior">Juonior</label>
+                </li>
+                <li>
+                    <input type="radio" name="experience" value="middle" id="middle" checked>
+                    <label for="middle">Middle</label>
+                </li>
+                <li>
+                    <input type="radio" name="experience" value="senior" id="senior">
+                    <label for="senior">Senior</label>
+                </li>
+            </ul>        
+        </div>
+
+        <label for="time">Date and time</label>
+        <input 
+            type="datetime-local" 
+            name="time" id="time" 
+            min="2022-08-19T13:00:00" 
+            max="2022-08-21T18:45:00">
+        <br>
+        <label for="pdf">Upload</label>
+        <input type="file" name="pdf" id="pdf">
+        <br>
+        <label for="comment">Please, write your comment</label>
+        <br>
+        <textarea name="comment" id="" rows="10"></textarea>
+        <br>
+        <input type="checkbox" name="agree" id="agree">
+        <label for="agree">Agree to agreement</label>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        (() => {
+            document
+                .querySelector('.js-speaker-form')
+                .addEventListener('submit', e => {
+                e.preventDefault();
+
+                new FormData(e.currentTarget).forEach((value, name) =>
+                    console.log(`${name}: ${value}`),
+                );
+
+                e.currentTarget.reset();
+            });
+        })();
+    </script>  
+</body>
+</html>

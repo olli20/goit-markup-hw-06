@@ -1,0 +1,84 @@
+:root {
+    --primary-font: 'Roboto', sans-serif;
+    --main-text-color: #212121;
+    --brand-color: #2196F3;
+}
+
+h1,
+h2,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+body {
+    font-family: var(--primary-font);
+    color: var(--main-text-color);
+}
+
+.list {
+    list-style: none;
+}
+
+.form {
+    width: 600px;
+    /* outline: 1px solid tomato; */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    background-color: #ccc;
+}
+
+.form-title {
+    margin-bottom: 10px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    outline: 1px solid white;
+    margin-bottom: 20px;
+}
+
+.form-field input {
+    margin: 0;
+    padding: 6px 10px;
+    margin-bottom: 5px;
+}
+
+.form-field input::placeholder {
+    color: #ccc;
+}
+
+.form-field label {
+    margin-bottom: 5px;
+}
+
+.group {
+    padding: 10px;
+    outline: 1px solid white;
+    margin-bottom: 20px;
+}
+
+.group-title {
+    margin-bottom: 10px;
+}
+
+.group ul {
+    display: flex;
+}
+
+.group li:not(:last-child) {
+    margin-right: 20px;
+}
+
+.topic-options input[type='checkbox'] {
+    
+}
