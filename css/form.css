@@ -26,6 +26,10 @@ body {
     list-style: none;
 }
 
+textarea {
+    resize: none;
+}
+
 .form {
     width: 600px;
     /* outline: 1px solid tomato; */
