@@ -40,29 +40,36 @@ textarea {
 }
 
 .form-title {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .form-field {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    outline: 1px solid white;
-    margin-bottom: 20px;
+    position: relative;
+    margin-bottom: 30px;
 }
 
-.form-field input {
-    margin: 0;
+.form-input {
+    width: 100%;
     padding: 6px 10px;
-    margin-bottom: 5px;
 }
 
-.form-field input::placeholder {
+.form-input::placeholder {
     color: #ccc;
 }
 
-.form-field label {
+.form-label {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
     margin-bottom: 5px;
+
+    transition: transform 250ms linear;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+    transform: translateX(-30px) translateY(-200%);
 }
 
 .group {

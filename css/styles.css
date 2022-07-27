@@ -302,6 +302,11 @@ img {
     min-width: 528px;
     padding: 40px;
     background-color: var(--global-white-color);
+    border-radius: 4px;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+                0px 1px 1px rgba(0, 0, 0, 0.14), 
+                0px 2px 1px rgba(0, 0, 0, 0.2);
 
     transition: transform 250ms var(--timing-function);
 }
@@ -353,6 +358,7 @@ img {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
+    position: relative;
 }
 
 .order-form-label {
@@ -367,10 +373,22 @@ img {
     min-height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    padding-left: 35px;
 }
 
-.order-form-input:focus {
+/* .order-form-input:focus {
     border: 1px solid var(--brand-color);
+} */
+
+.order-form-icon {
+    position: absolute;
+    left: 12px;
+    bottom: 11px;
+    fill: var(--main-text-color);
+}
+
+.order-form-input:focus + .order-form-icon {
+    fill: var(--brand-color);
 }
 
 .order-comment {
