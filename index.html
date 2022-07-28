@@ -61,19 +61,19 @@
         <section class="hero">
                 <div class="container">
                     <h1 class="main-title">Ефективні рішення<br /> для вашого бізнесу</h1>
-                    <button class="hero-button" data-modal-open type="button">Замовити послугу</button>
+                    <button class="basic-button" data-modal-open type="button">Замовити послугу</button>
                 </div>
 
                 <div class="backdrop is-hidden" data-modal>
                     <div class="modal">
-                        <button type="button" class="button-close" data-modal-close>
+                        <button class="close-button" type="button" data-modal-close>
                             <svg class="close-icon" width="18" height="18">
                                 <use href="./images/sprite.svg#close"></use>
                             </svg>
                         </button>
 
                         <!-- FORM -->
-                        <form class="order-form">
+                        <form class="order-form" autocomplete="off">
                             <p class="order-form-title">Залиште свої дані, ми вам передзвонимо</p>
                             <div class="order-form-field">
                                 <label class="order-form-label" for="name">Ім'я</label>
@@ -102,14 +102,17 @@
                                     class="order-comment"
                                     name="comment" 
                                     id="comment" 
-                                    placeholder="Введіть текст">
-                                </textarea>
+                                    placeholder="Введіть текст"
+                                ></textarea>
                             </div>
-                            <div class="order-form-agree">
-                                <input type="checkbox" name="agree" id="agree">
-                                <label for="agree">Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></label>
-                            </div>
-                            <button class="hero-button" type="submit">Відправити</button>
+                            <label class="agree-field">
+                                <input class="agree-field-input" type="checkbox" name="agree">
+                                <svg class="agree-icon" width="16" height="15">
+                                    <use href=""></use>
+                                </svg>
+                                <p class="agree-label">Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></p> 
+                            </label>
+                            <button class="basic-button" type="submit">Відправити</button>
                         </form>
                     </div>
                 </div>

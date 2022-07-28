@@ -8,17 +8,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/form.css">
 
-    <style>
-        textarea {
-            resize: vertical;
-        }
-    </style>
 </head>
 <body>
     <form class="form js-speaker-form" autocomplete="off">
@@ -26,48 +21,68 @@
         <div class="form-field">
             <input class="form-input" type="text" name="name"  id="name" placeholder=" "/>
             <label class="form-label" for="name">Name</label>
+            <span class="icon"></span>
         </div>
         <div class="form-field">
             <input class="form-input" type="tel" name="tel" id="tel" placeholder=" " />
             <label class="form-label" for="tel">Phone Number</label>
+            <span class="icon"></span>
         </div>
         <div class="form-field">
             <input class="form-input" type="email" name="email" id="email" placeholder=" " autocomplete="on" />
-            <label class="form-label" for="email">Email</label>           
+            <label class="form-label" for="email">Email</label> 
+            <span class="icon"></span>
         </div>
-        <div class="group"  role="group">
-            <h2>Your topic</h2>
+        <div class="group" role="group">
+            <h2 class="group-title">Your topic</h2>
             <ul class="topic-options list">
-                <li>
-                    <input type="checkbox" name="topic" value="html" id="html">
-                    <label for="html">HTML</label>
+                <li class="topic-item">
+                    <label class="topic-field">
+                        <input class="topic-checkbox" type="checkbox" name="topic" value="html">
+                        <span class="topic-icon"></span>
+                        <span class="topic-label">HTML</span>
+                    </label>                   
                 </li>
-                <li>
-                    <input type="checkbox" name="topic" value="css" id="css">
-                    <label for="css">CSS</label>
+                <li class="topic-item">
+                    <label class="topic-field">
+                        <input class="topic-checkbox" type="checkbox" name="topic">
+                        <span class="topic-icon"></span>
+                        <span class="topic-label">CSS</span>
+                    </label>
                 </li>
-                <li>
-                    <input type="checkbox" name="topic" value="js" id="js">
-                    <label for="js">JS</label>
+                <li class="topic-item">
+                    <label class="topic-field">
+                        <input class="topic-checkbox" type="checkbox" name="topic">
+                        <span class="topic-icon"></span>
+                        <span class="topic-label">JavaScript</span>
+                    </label>
                 </li>
             </ul>           
         </div>
         <div class="group" role="group">
             <h2 class="group-title">Your experience</h2>
             <ul class="list">
-                <li>
-                    <input type="radio" name="experience" value="juonior" id="juonior">
-                    <label for="juonior">Juonior</label>
+                <li class="exp-item">
+                    <label class="exp-field">
+                        <input class="exp-input" type="radio" name="experience" value="juonior">
+                        <span class="exp-icon"></span>
+                        <span>Juonior</span>
+                    </label>                    
                 </li>
-                <li>
-                    <input type="radio" name="experience" value="middle" id="middle" checked>
-                    <label for="middle">Middle</label>
+                <li class="exp-item">
+                    <label class="exp-field">
+                        <input class="exp-input" type="radio" name="experience" value="middle">
+                        <span class="exp-icon"></span>
+                        <span>Middle</span>
+                    </label>
                 </li>
-                <li>
-                    <input type="radio" name="experience" value="senior" id="senior">
-                    <label for="senior">Senior</label>
-                </li>
-            </ul>        
+                <li class="exp-item">
+                    <label class="exp-field">
+                        <input class="exp-input" type="radio" name="experience" value="senior">
+                        <span class="exp-icon"></span>
+                        <span>Senior</span>
+                    </label>
+                </li>      
         </div>
 
         <label for="time">Date and time</label>

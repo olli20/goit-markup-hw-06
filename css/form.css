@@ -39,6 +39,10 @@ textarea {
     background-color: #ccc;
 }
 
+.form:focus-within {
+    background-color: tomato;
+}
+
 .form-title {
     margin-bottom: 30px;
 }
@@ -50,7 +54,9 @@ textarea {
 
 .form-input {
     width: 100%;
-    padding: 6px 10px;
+    padding: 10px 40px;
+    border-radius: 4px;
+    border-width: 0;
 }
 
 .form-input::placeholder {
@@ -60,7 +66,7 @@ textarea {
 .form-label {
     position: absolute;
     top: 50%;
-    left: 30px;
+    left: 40px;
     transform: translateY(-50%);
     margin-bottom: 5px;
 
@@ -72,24 +78,76 @@ textarea {
     transform: translateX(-30px) translateY(-200%);
 }
 
+.icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: orange;
+}
+
 .group {
-    padding: 10px;
-    outline: 1px solid white;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .group-title {
     margin-bottom: 10px;
 }
 
-.group ul {
+.topic-options {
     display: flex;
+    align-items: center;
 }
 
-.group li:not(:last-child) {
-    margin-right: 20px;
+.order-form-input:focus {
+    background-color: #2196F3;
 }
 
-.topic-options input[type='checkbox'] {
-    
+.topic-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.topic-field {
+    display: flex;
+    align-items: center;
+}
+
+.topic-checkbox {
+    /* --webkit-appearance: none;
+    --moz-appearance: none;
+    appearance: none; */
+
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.topic-icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    background-color: white;
+    border: 1px solid black;
+
+    transition: background-color 250ms linear;
+}
+
+.topic-checkbox:checked + .topic-icon {
+    background-color: #ccc;
+    background-image: url(../images/icons/close.svg);
+    background-size: contain;
+    background-origin: border-box;
+}
+
+.topic-checkbox:checked ~ .topic-label {
+    font-weight: 700;
 }
