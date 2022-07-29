@@ -77,27 +77,27 @@
                             <p class="order-form-title">Залиште свої дані, ми вам передзвонимо</p>
                             <div class="order-form-field">
                                 <label class="order-form-label" for="name">Ім'я</label>
-                                <input class="order-form-input" type="text" id="name" autocomplete="off">
+                                <input class="order-form-input" type="text" id="name" name="name" autocomplete="off">
                                 <svg class="order-form-icon" width="18" height="18">
                                     <use href="./images/sprite.svg#person"></use>
                                 </svg>
                             </div>
                             <div class="order-form-field">
                                 <label class="order-form-label" for="tel">Телефон</label>
-                                <input class="order-form-input" type="tel" id="tel" autocomplete="off">
+                                <input class="order-form-input" type="tel" id="tel" name="tel" autocomplete="off">
                                 <svg class="order-form-icon" width="18" height="18">
                                     <use href="./images/sprite.svg#phone"></use>
                                 </svg>
                             </div>
                             <div class="order-form-field">
                                 <label class="order-form-label" for="email">Пошта</label>
-                                <input class="order-form-input" type="email" id="email">
+                                <input class="order-form-input" type="email" id="email" name="email">
                                 <svg class="order-form-icon" width="18" height="18">
                                     <use href="./images/sprite.svg#email"></use>
                                 </svg>
                             </div>
                             <div class="order-form-field">
-                                <label class="order-form-label" for="comment">Коментар</label>
+                                <label class="order-form-label" for="comment" name="comment">Коментар</label>
                                 <textarea
                                     class="order-comment"
                                     name="comment" 
@@ -106,11 +106,11 @@
                                 ></textarea>
                             </div>
                             <label class="agree-field">
-                                <input class="visually-hidden agree-field-input" type="checkbox" name="agree">
-                                <svg class="notagree-icon" width="16" height="15">
+                                <input class="agree-input visually-hidden" type="checkbox" name="conditions">
+                                <svg class="unchecked-icon" width="16" height="15">
                                     <use href="./images/sprite.svg#unchecked"></use>
                                 </svg>
-                                <svg class="agree-icon" width="16" height="15">
+                                <svg class="checked-icon" width="16" height="15">
                                     <use href="./images/sprite.svg#checked"></use>
                                 </svg>
                                 <span class="agree-label">Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></span> 
@@ -175,7 +175,7 @@
                 <h2 class="section-title">Чим ми займаємося</h2>
                 <ul class="work-list list">
                     <li class="work-item">
-                        <img class="work-img"src="./images/work/work1.jpg" alt="Сучасне робоче місце програміста" width="370" height="294">
+                        <img class="work-img" src="./images/work/work1.jpg" alt="Сучасне робоче місце програміста" width="370" height="294">
                         <p class="work-text">Десктопні додатки</p>
                     </li>
                     <li class="work-item">
@@ -183,7 +183,7 @@
                         <p class="work-text">Мобільні додатки</p>
                     </li>
                     <li class="work-item">
-                        <img class="work-img"src="./images/work/work3.jpg" alt="Людина вибирає колір з палітри кольорів на планшеті" width="370"
+                        <img class="work-img" src="./images/work/work3.jpg" alt="Людина вибирає колір з палітри кольорів на планшеті" width="370"
                             height="294">
                         <p class="work-text">Дизайнерські рішення</p>
                     </li>
@@ -464,21 +464,20 @@
             </div>
             <div>                               
                 <p class="footer-subtitle">Підпишіться на розсилку</p>  
-                    <form class="subscription-form">
-                        <label class="subscription-field" name="email">
-                            <input class="subscription-input" type="email" placeholder=" ">
-                            <span class="subscription-label">E-mail</span>
-                        </label>
-                        <button class="basic-button subscription-button" type="submit">
-                            <span class="subscription-button-text">Підписатись</span>
-                            <svg class="subscription-button-icon" width="24" height="24">
-                                <use href="./images/sprite.svg#send"></use>
-                            </svg>
-                        </button>
-                    </form>
-                </div>               
+                <form class="subscription-form">
+                    <label class="subscription-field">
+                        <input class="subscription-input" type="email" name="email" placeholder=" ">
+                        <span class="subscription-label">E-mail</span>
+                    </label>
+                    <button class="basic-button subscription-button" type="submit">
+                        <span class="subscription-button-text">Підписатись</span>
+                        <svg class="subscription-button-icon" width="24" height="24">
+                            <use href="./images/sprite.svg#send"></use>
+                        </svg>
+                    </button>
+                </form>
             </div>
-        </div>        
+        </div> 
     </footer>
 
     <script src="./js/modal.js"></script>

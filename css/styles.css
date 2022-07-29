@@ -317,17 +317,23 @@ img {
     border-radius: 15px;
     background-color: var(--global-white-color);
     cursor: pointer;
+
+    transition: border 250px var(--timing-function);
 }
 
 .close-icon {
     fill: var(--global-black-color);
-
     transition: fill 250ms var(--timing-function);
 }
 
 .close-button:hover .close-icon,
 .close-button:focus .close-icon {
     fill: var(--brand-color);
+}
+
+.close-button:focus-visible {
+    border: 1px solid var(--brand-color);
+    outline: none;
 }
 
 /* =========== FORM =========== */
@@ -366,9 +372,19 @@ img {
 
 .order-form-input {
     min-height: 40px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding-left: 42px;
+
+    transition: border-color 250ms var(--timing-function);
+}
+
+.order-form-input:focus,
+.order-comment:focus {
+    outline: none;
+    border-color: var(--brand-color);
 }
 
 .order-form-icon {
@@ -377,6 +393,8 @@ img {
     bottom: 50%;
     transform: translateY(100%);
     fill: var(--main-text-color);
+
+    transition: fill 250ms var(--timing-function);
 }
 
 .order-form-input:focus + .order-form-icon {
@@ -398,12 +416,6 @@ img {
     color: rgba(117, 117, 117, 0.5);
 }
 
-.order-form-input:focus,
-.order-comment:focus {
-    outline: none;
-    border-color: var(--brand-color);
-}
-
 .agree-field {
     display: inline-block;
     position: relative;
@@ -413,27 +425,14 @@ img {
     text-align: center;
 }
 
-.agree-field-input {
-
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-
-.agree-icon, .notagree-icon {
+.checked-icon, .unchecked-icon {
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
 }
 
-.agree-icon {
-    
+.checked-icon {
     border-radius: 2px;
     background-color: var(--brand-color);
     fill: var(--global-white-color);
@@ -444,22 +443,31 @@ img {
     transition: opacity 250ms var(--timing-function);
 }
 
-.notagree-icon {
+.unchecked-icon {
     background-color: var(--global-white-color);
     fill: var(--main-text-color);
 
     opacity: 1;
 
-    transition: opacity 250ms var(--timing-function);
+    transition: opacity 250ms var(--timing-function),
+                fill 250ms var(--timing-function);
 }
 
-.agree-field-input:checked ~ .agree-icon {
+/* svgs change when checked, focus-within */
+
+.agree-input:checked ~ .checked-icon {
     opacity: 1;
 }
 
-.agree-field-input:checked ~ .notagree-icon {
+.agree-input:checked ~ .unchecked-icon {
     opacity: 0;
 }
+
+.agree-field:focus-within > .unchecked-icon {
+    fill: var(--brand-color);
+}
+
+/* ================================= */
 
 .agree-label {
     font-size: 14px;
@@ -471,15 +479,11 @@ img {
 .agree-label a {
     color: var(--brand-color);
 }
-
-
-
-
+/* =========== / FORM =========== */
 
 /* =========== / MODAL =========== */
 
 /* =========== / HERO =========== */
-
 
 
 /* =========== BENEFITS =========== */
@@ -968,6 +972,7 @@ img {
 
 .subscription-form {
     display: flex;
+    align-items: center;
 }
 
 .subscription-field {
@@ -990,6 +995,14 @@ img {
     line-height: 20px;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+
+    transition: outline 250ms var(--timing-function);
+}
+
+.subscription-input:focus {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline-color: var(--global-white-color);
+    outline-style: solid;
 }
 
 .subscription-label {
@@ -1002,12 +1015,15 @@ img {
     line-height: 20px;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+
+    opacity: 1;
+
+    transition: opacity 250ms var(--timing-function);
 }
 
 .subscription-input:focus + .subscription-label,
 .subscription-input:not(:placeholder-shown) + .subscription-label {
-    visibility: hidden;
-    overflow: hidden;
+    opacity: 0;
     pointer-events: none;
 }
 
@@ -1017,10 +1033,10 @@ img {
 }
 
 .subscription-button-icon {
-    display: inline-flex;
     margin-left: 10px;
     fill: var(--global-white-color);
 }
+/* =========== / SUBSCRIPTION FORM =========== */
 
 /* =========== / FOOTER =========== */
 
