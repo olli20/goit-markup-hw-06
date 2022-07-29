@@ -73,18 +73,18 @@
                         </button>
 
                         <!-- FORM -->
-                        <form class="order-form" autocomplete="off">
+                        <form class="order-form">
                             <p class="order-form-title">Залиште свої дані, ми вам передзвонимо</p>
                             <div class="order-form-field">
                                 <label class="order-form-label" for="name">Ім'я</label>
-                                <input class="order-form-input" type="text" id="name">
+                                <input class="order-form-input" type="text" id="name" autocomplete="off">
                                 <svg class="order-form-icon" width="18" height="18">
                                     <use href="./images/sprite.svg#person"></use>
                                 </svg>
                             </div>
                             <div class="order-form-field">
                                 <label class="order-form-label" for="tel">Телефон</label>
-                                <input class="order-form-input" type="tel" id="tel">
+                                <input class="order-form-input" type="tel" id="tel" autocomplete="off">
                                 <svg class="order-form-icon" width="18" height="18">
                                     <use href="./images/sprite.svg#phone"></use>
                                 </svg>
@@ -107,6 +107,9 @@
                             </div>
                             <label class="agree-field">
                                 <input class="visually-hidden agree-field-input" type="checkbox" name="agree">
+                                <svg class="notagree-icon" width="16" height="15">
+                                    <use href="./images/sprite-before-optimisation.svg#unchecked"></use>
+                                </svg>
                                 <svg class="agree-icon" width="16" height="15">
                                     <use href="./images/sprite-before-optimisation.svg#checked"></use>
                                 </svg>
