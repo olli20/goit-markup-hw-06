@@ -433,6 +433,7 @@ img {
 }
 
 .agree-icon {
+    
     border-radius: 2px;
     background-color: var(--brand-color);
     fill: var(--global-white-color);
